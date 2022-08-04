@@ -5,22 +5,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginPortalComponent } from './login-portal/login-portal.component';
 import { LoginPageComponent } from './login-page/login-page.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './shared/header/header.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { FormComponent } from './form/form.component';
+import { AddFormComponent } from './add-form/add-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginPortalComponent,
     LoginPageComponent,
+    HeaderComponent,
+    UserDashboardComponent,
+    FormComponent,
+    AddFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

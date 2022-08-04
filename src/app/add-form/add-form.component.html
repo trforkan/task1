@@ -1,0 +1,52 @@
+<div class="container">
+
+  <div class="add-form">
+    <h2>ADD FORM</h2>
+  </div>
+
+  <div class="form-info">
+
+    <form class="form-info-input" [formGroup]="formInfo" >
+
+      <mat-form-field appearancer="fill">
+        <mat-label>Title</mat-label>
+        <input formControlName="title" matInput type="text">
+      </mat-form-field>
+
+      <mat-form-field appearancer="fill">
+        <mat-label>Form Description</mat-label>
+        <input formControlName="description" matInput type="text">
+      </mat-form-field>
+
+      <button mat-stroked-button type="submit" (click)="display()">Check Data</button>
+
+    </form>
+
+  </div>
+
+  <div class="form-data">
+    <form class="form-data-input">
+      <mat-form-field>
+        <mat-label>Question</mat-label>
+        <input matInput type="text">
+
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select>
+          <select >
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+    </form>
+  </div>
+
+</div>

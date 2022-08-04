@@ -1,0 +1,36 @@
+div {
+  margin-top: 15px;
+
+  .form-title {
+
+    margin-left: 20px;
+  }
+
+  .search-panel {
+
+    justify-content: space-between;
+    display: flex;
+
+
+    .search-bar {
+      margin-left: 20px;
+      width: 100%;
+
+      &-field {
+
+        width: 50%;
+        input {
+        }
+
+      }
+    }
+
+    .add-button {
+      button {
+        margin-right: 20px;
+        color: white;
+        background-color: rgb(37, 150, 190);
+      }
+    }
+  }
+}

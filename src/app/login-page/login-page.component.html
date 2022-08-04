@@ -49,13 +49,21 @@
 
     <button type="submit" mat-raised-button>LOGIN</button> -->
 
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmitbtn()">
 
-    <form action="">
-
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>Username</mat-label>
-        <input matInput type="text">
+        <input type="text" matInput formControlName="userName" required>
       </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input type="text" matInput formControlName="password" required>
+      </mat-form-field>
+
+      <a href="">Forgot Password?</a>
+
+      <button [disabled] = "loginForm.invalid" type="submit" mat-raised-button>LOGIN</button>
 
 
     </form>

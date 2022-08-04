@@ -1,0 +1,87 @@
+<mat-sidenav-container>
+
+
+  <mat-sidenav [opened]="true" class="sidenav" #sidenav mode="side">
+      <div class="sidenav-button">
+        <button mat-button [matMenuTriggerFor]="menu">
+          <button mat-mini-fab>S</button>
+          systemadmin
+          <button mat-icon-button>
+            <mat-icon>keyboard_arrow_down</mat-icon>
+          </button>
+        </button>
+
+        <mat-menu class="menu-items" #menu="matMenu" xPosition="after">
+
+          <button mat-button style="display: flex; flex-direction:column">
+            <mat-icon>account_circle</mat-icon>
+            My Account
+          </button>
+          <button mat-button style="display: flex; flex-direction:column">
+            <mat-icon>info</mat-icon>
+            About
+          </button>
+          <button mat-button style="display: flex; flex-direction:column">
+            <mat-icon>logout</mat-icon>
+            LogOut
+          </button>
+
+        </mat-menu>
+
+      </div>
+
+      <div class="sidenav-subButtons">
+
+        <form>
+
+          <button mat-stroked-button routerLink="/dash/form">
+            <mat-icon>assignment</mat-icon>
+            Form
+          </button>
+
+          <button mat-stroked-button routerLink="/dash/response" >
+            <mat-icon>assignment_turned_in</mat-icon>
+            Response
+          </button>
+
+          <button mat-stroked-button routerLink="/dash/user">
+            <mat-icon>account_circle</mat-icon>
+            User
+          </button>
+
+          <button mat-stroked-button routerLink="/dash/map">
+            <mat-icon>map</mat-icon>
+            Map
+          </button>
+
+          <!-- <pre>{{valueButton | json}}</pre> -->
+
+        </form>
+
+      </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <div class="sidenav-content">
+      <button mat-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <img src="assets/ACP_Logo.png" alt="">
+    </div>
+
+
+    <div class="side-nav">
+
+      <!-- hello -->
+
+      <router-outlet></router-outlet>
+      <!-- <app-form></app-form> -->
+
+    </div>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+

@@ -3,14 +3,20 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
-// import { MatForm}
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
+// import { MatNativeControlModule } from '@angular/material/core'
 
 
 const Material = [
   MatFormFieldModule,
   MatButtonModule,
   MatInputModule,
-  MatIconModule
+  MatIconModule,
+  MatSidenavModule,
+  MatMenuModule,
+  MatSelectModule
 ];
 
 
