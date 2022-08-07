@@ -63,9 +63,9 @@ export class AddFormComponent implements OnInit {
   idxPos(val:number,event:any) {
     // console.log(val);
     // console.log(event.target.value);
-    // this.optionList[val]=event.target.value;
-    console.log(event.target.value);
-    // console.log(this.optionList);
+    this.optionList[val]=event.target.value;
+    // console.log(event.target.value);
+    console.log(this.optionList);
     // this.temp=event.target.value;
 
   }

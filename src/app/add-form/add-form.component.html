@@ -53,7 +53,7 @@
 
           <mat-form-field class="inputData" *ngFor="let answer of optionList index as i">
             <mat-label>Answer</mat-label>
-            <input type="text" matInput (keyup.enter)="idxPos(i,$event)">
+            <input type="text" matInput (change)="idxPos(i,$event)">
 
           </mat-form-field>
           <button *ngFor="let item of optionList index as i" class="dltButton" mat-button (click)="dltFromOptions(i)">
