@@ -18,7 +18,7 @@
         <input formControlName="description" matInput type="text">
       </mat-form-field>
 
-      <button mat-stroked-button type="submit" (click)="display()">Check Data</button>
+      <!-- <button mat-stroked-button type="submit" (click)="display()">Check Data</button> -->
 
     </form>
 
@@ -26,27 +26,57 @@
 
   <div class="form-data">
     <form class="form-data-input">
-      <mat-form-field>
-        <mat-label>Question</mat-label>
-        <input matInput type="text">
 
-      </mat-form-field>
+      <div class="form-data-question">
+        <mat-form-field class="ques">
+          <mat-label>Question</mat-label>
+          <input matInput type="text">
 
-      <mat-form-field>
-        <mat-select>
-          <select >
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
-          </select>
-        </mat-select>
-      </mat-form-field>
+        </mat-form-field>
 
-      <mat-form-field>
-        <mat-label>Description</mat-label>
-        <input matInput type="text">
-      </mat-form-field>
+        <mat-form-field class="ques-type" appearance="outline">
+          <mat-label>Question Type</mat-label>
+          <mat-select (selectionChange)="setQuesType($event.value)">
+            <mat-option *ngFor="let quesType of quesTypes" [value]="quesType">{{quesType}}</mat-option>
+
+          </mat-select>
+        </mat-form-field>
+
+
+        <!-- <button onclick="setQuesType()">Submit</button> -->
+      </div>
+
+
+      <div class="ques-details">
+
+        <div class="ans-manage">
+
+          <mat-form-field class="inputData" *ngFor="let answer of optionList index as i">
+            <mat-label>Answer</mat-label>
+            <input type="text" matInput (keyup.enter)="idxPos(i,$event)">
+
+          </mat-form-field>
+          <button *ngFor="let item of optionList index as i" class="dltButton" mat-button (click)="dltFromOptions(i)">
+            <mat-icon>delete</mat-icon>
+          </button>
+
+
+        </div>
+
+
+
+        <button mat-stroked-button (click)="onTapAddbtn()">Add Option</button>
+
+      </div>
+
     </form>
+
   </div>
+  <div class="add-discard">
+    <button class="discard" mat-button routerLink="/dash/form">Discard</button>
+    <button class="save" mat-button>Save Form</button>
+  </div>
+
+
 
 </div>

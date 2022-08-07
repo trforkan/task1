@@ -7,3 +7,9 @@ export interface formInfo {
   title: string | null,
   description: string | null
 };
+
+
+export interface multiChoiceOptions {
+  ques: string | null;
+  options: string [];
+}

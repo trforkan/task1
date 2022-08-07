@@ -11,10 +11,13 @@ import { Router } from '@angular/router';
 })
 export class LoginPageComponent implements OnInit {
 
-  loginForm = new FormGroup({
-    userName: new FormControl(""),
-    password: new FormControl("")
-  })
+
+  loginInfo: login[] = [];
+
+  loginForm: FormGroup = new FormGroup({
+    userName: new FormControl("",[]),
+    password: new FormControl("",[])
+  });
 
   constructor(private router: Router) { }
 
@@ -22,7 +25,9 @@ export class LoginPageComponent implements OnInit {
   }
 
   onSubmitbtn() {
-    console.log(this.loginForm);
+    this.loginInfo = this.loginForm.value;
+    // console.log(this.loginForm.value);
+    console.log(this.loginInfo);
     this.router.navigateByUrl('/dash');
   }
 

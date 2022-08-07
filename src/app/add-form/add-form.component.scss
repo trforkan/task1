@@ -34,6 +34,59 @@
     &-input {
       display: flex;
       flex-direction: column;
+
+      .form-data-question {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .ques {
+          width: 60%;
+        }
+        .ques-type {
+
+        }
+      }
+
+      .ques-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // position: relative;
+        width: 100%;
+
+        .ans-manage {
+
+          border: 1px solid black;
+
+          width: 100%;
+
+          .inputData {
+            width: 70%;
+          }
+
+          .dltButton {
+            width: 20%;
+          }
+
+        }
+      }
+
+    }
+  }
+
+  .add-discard {
+    display: flex;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 20px;
+    justify-content: space-between;
+
+    .discard {
+
+    }
+    .save {
+      background-color: rgb(170, 170, 170);
     }
   }
 
