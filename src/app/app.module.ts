@@ -11,6 +11,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { FormComponent } from './form/form.component';
 import { AddFormComponent } from './add-form/add-form.component';
+import { UserComponent } from './user/user.component';
+import { AddUserComponent } from './add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { AddFormComponent } from './add-form/add-form.component';
     UserDashboardComponent,
     FormComponent,
     AddFormComponent,
+    UserComponent,
+    AddUserComponent,
   ],
   imports: [
     BrowserModule,

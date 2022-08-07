@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Users</h2>
+
+  <div class="search-create-user">
+
+    <div class="search-user">
+
+      <mat-form-field class="select" appearance="outline">
+        <mat-select [(value)]="selected">
+          <mat-option value="A">A</mat-option>
+          <mat-option value="B">B</mat-option>
+          <mat-option value="C">C</mat-option>
+         </mat-select>
+      </mat-form-field>
+
+      <mat-form-field  class="search" appearance="outline">
+        <mat-label>Search</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+    </div>
+
+    <div class="create-user">
+      <button class="create-button" mat-stroked-button routerLink="/dash/createuser">Create User</button>
+    </div>
+
+  </div>
+</div>

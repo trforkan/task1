@@ -12,4 +12,15 @@ export interface formInfo {
 export interface multiChoiceOptions {
   ques: string | null;
   options: string [];
+};
+
+
+export interface adminUser {
+  name: string | null,
+  email: string | null,
+  role: string | null,
+  lastLogin: string | null,
+  status: boolean | null
 }
+
+

@@ -1,0 +1,23 @@
+.container {
+
+
+  margin: 15px;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 98%;
+
+  .add-user {
+    // background-color: aquamarine;
+    border: 1px solid rosybrown;
+    width: 40%;
+    margin: auto;
+
+    .container-2 {
+
+    }
+  }
+
+}

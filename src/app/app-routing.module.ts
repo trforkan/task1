@@ -1,3 +1,5 @@
+import { AddUserComponent } from './add-user/add-user.component';
+import { UserComponent } from './user/user.component';
 import { AddFormComponent } from './add-form/add-form.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FormComponent } from './form/form.component';
@@ -16,6 +18,8 @@ const routes: Routes = [
         { path: '', component: FormComponent },
         { path: 'form', component: FormComponent },
         { path: 'create', component: AddFormComponent },
+        { path: 'user', component: UserComponent },
+        { path: 'createuser', component: AddUserComponent }
       ],
   },
 
