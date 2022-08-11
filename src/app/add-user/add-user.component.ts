@@ -1,3 +1,4 @@
+import { FormControl, FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddUserComponent implements OnInit {
 
+  userInfo: FormGroup = new FormGroup({
+    nameTitle: new FormControl("",[]),
+    firstName: new FormControl("",[]),
+    lastName: new FormControl("",[]),
+    displayName: new FormControl("",[]),
+    gender: new FormControl("",[]),
+    nationality: new FormControl("",[]),
+    email: new FormControl("",[]),
+    role: new FormControl("",[]),
+    region: new FormControl("",[]),
+    mobile: new FormControl("",[]),
+  })
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  display() {
+    // console.log(this.userInfo.value);
+    console.log(this.userInfo);
   }
 
 }

@@ -5,72 +5,61 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-add-form',
   templateUrl: './add-form.component.html',
-  styleUrls: ['./add-form.component.scss']
+  styleUrls: ['./add-form.component.scss'],
 })
 export class AddFormComponent implements OnInit {
-
   formInfo: FormGroup = new FormGroup({
-    title: new FormControl(""),
-    description: new FormControl("")
+    title: new FormControl('', []),
+    description: new FormControl('', []),
   });
 
-  question: FormGroup = new FormGroup({
-    quesTitle: new FormControl("",[])
-  });
+  // questionForm: FormGroup = new FormGroup({
+  //   quesTitle: new FormControl("",[])
+  // });
 
+  quesTitle: string | null = null;
 
   quesTypes: string[] = [
-
-    "Multiple Choice",
-    "Linear Scale",
-    "Checkbox",
-    "Short Text",
-    "File Upload"
-
+    'Multiple Choice',
+    'Linear Scale',
+    'Checkbox',
+    'Short Text',
+    'File Upload',
   ];
 
   optionList: string[] = [];
 
-  lula_forkan: FormGroup = new FormGroup({
-    options: new FormArray([]),
-  });
-
   multiChoiceQues: multiChoiceOptions[] = [];
 
+  quesTypeName: string = 'Checkbox';
 
-
-  quesTypeName: string = "Checkbox";
-
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-
-    this.optionList.push("");
+    this.optionList.push('');
   }
 
-
+  setQuesTitle(event: any) {
+    this.quesTitle = event.target.value;
+    // console.log(event.target.value);
+  }
 
   onTapAddbtn() {
+    this.optionList.push('');
 
-    this.optionList.push("");
-    // console.log(this.multiChoiceList);
-
+    // console.log(this.formInfo.value);
+    // console.log(this.quesTypeName);
+    // console.log(this.quesTitle);
+    // console.log(this.optionList);
   }
 
-  temp: string | null = "";
+  temp: string | null = '';
 
-  idxPos(val:number,event:any) {
-    // console.log(val);
-    // console.log(event.target.value);
-    this.optionList[val]=event.target.value;
-    // console.log(event.target.value);
+  idxPos(val: number, event: any) {
+    this.optionList[val] = event.target.value;
+
     console.log(this.optionList);
-    // this.temp=event.target.value;
-
   }
-
-
 
   display() {
     console.log(this.quesTypeName);
@@ -78,18 +67,27 @@ export class AddFormComponent implements OnInit {
     // console.log(this.quesTypes);
   }
 
-  setQuesType(event: Event) {
+  setQuesType(event: any) {
     // console.log(event);
 
-    this.quesTypeName = JSON.stringify(event);
+    this.quesTypeName = event; //JSON.stringify(event);
 
     console.log(this.quesTypeName);
-
   }
 
   dltFromOptions(keyvalue: number) {
     console.log(this.optionList[keyvalue]);
-    this.optionList.splice(keyvalue,1);
+    this.optionList.splice(keyvalue, 1);
   }
 
+  saveForm() {
+    this.multiChoiceQues.push({
+      title: this.formInfo.value,
+      quesType: this.quesTypeName,
+      ques: this.quesTitle,
+      options: this.optionList,
+    });
+    // console.log(this.quesTitle);
+    console.log(this.multiChoiceQues);
+  }
 }

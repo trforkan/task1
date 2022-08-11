@@ -25,12 +25,13 @@
   </div>
 
   <div class="form-data">
+
     <form class="form-data-input">
 
       <div class="form-data-question">
         <mat-form-field class="ques">
           <mat-label>Question</mat-label>
-          <input matInput type="text">
+          <input matInput type="text" (change)="setQuesTitle($event)">
 
         </mat-form-field>
 
@@ -46,20 +47,20 @@
         <!-- <button onclick="setQuesType()">Submit</button> -->
       </div>
 
+      <br>
 
       <div class="ques-details">
 
-        <div class="ans-manage">
+        <div class="ans-manage" *ngFor="let answer of optionList index as i">
 
-          <mat-form-field class="inputData" *ngFor="let answer of optionList index as i">
+          <mat-form-field class="inputData" >
             <mat-label>Answer</mat-label>
-            <input type="text" matInput (change)="idxPos(i,$event)">
+            <input type="text" matInput (change)="idxPos(i,$event)" [value]="answer">
 
           </mat-form-field>
-          <button *ngFor="let item of optionList index as i" class="dltButton" mat-button (click)="dltFromOptions(i)">
+          <button class="dltButton" mat-button (click)="dltFromOptions(i)">
             <mat-icon>delete</mat-icon>
           </button>
-
 
         </div>
 
@@ -74,7 +75,7 @@
   </div>
   <div class="add-discard">
     <button class="discard" mat-button routerLink="/dash/form">Discard</button>
-    <button class="save" mat-button>Save Form</button>
+    <button class="save" mat-button (click)="saveForm()">Save Form</button>
   </div>
 
 

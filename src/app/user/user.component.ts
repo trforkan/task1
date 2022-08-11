@@ -10,6 +10,14 @@ export class UserComponent implements OnInit {
 
   selected = "A";
 
+  nameTitles: string[] = [
+    "Mr",
+    "Mrs",
+    "Miss",
+    "Dr",
+    "Prof"
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

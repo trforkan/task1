@@ -6,8 +6,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
-// import { MatNativeControlModule } from '@angular/material/core'
-
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 const Material = [
   MatFormFieldModule,
@@ -16,7 +18,11 @@ const Material = [
   MatIconModule,
   MatSidenavModule,
   MatMenuModule,
-  MatSelectModule
+  MatSelectModule,
+  MatGridListModule,
+  MatRadioModule,
+  MatDatepickerModule,
+  MatAutocompleteModule
 ];
 
 

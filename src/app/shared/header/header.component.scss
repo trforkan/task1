@@ -12,16 +12,50 @@ mat-sidenav-container {
 
     &-button {
 
-      padding: 10px;
-
       border-bottom: 1px solid rgb(189, 184, 177);
 
       display: flex;
 
-      button {
-        button {
-          // color: aqua;
+      &-main {
+        width: 150px;
+        height: auto;
+        // border: 1px solid red;
+        display: flex;
+        // flex-direction: row;
+        margin: 5px;
+        padding-left: 15px;
+        align-items: center;
+        h4 {
+          display: flex;
+          align-items: center;
         }
+        li {
+          height: 48px;
+          display: flex;
+          justify-content: flex-start;
+
+          // align-items: center;
+          // justify-content: center;
+          list-style: none;
+          h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            margin: auto;
+            // border: 1px solid red;
+            background-color: #3498DB;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            color: white;
+          }
+        }
+
+        mai-icon {
+          border: 1px solid red;
+        }
+
       }
 
       .menu-items {

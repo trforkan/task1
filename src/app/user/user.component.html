@@ -5,17 +5,20 @@
 
     <div class="search-user">
 
-      <mat-form-field class="select" appearance="outline">
-        <mat-select [(value)]="selected">
-          <mat-option value="A">A</mat-option>
-          <mat-option value="B">B</mat-option>
-          <mat-option value="C">C</mat-option>
+      <mat-form-field class="select"  >
+        <mat-select [(value)]="selected" >
+          <mat-option value="nameTitle" *ngFor="let nameTitle of nameTitles">{{nameTitle}}</mat-option>
+          <!-- <mat-option value="B">B</mat-option>
+          <mat-option value="C">C</mat-option> -->
          </mat-select>
       </mat-form-field>
 
-      <mat-form-field  class="search" appearance="outline">
-        <mat-label>Search</mat-label>
-        <input matInput type="text">
+      <mat-form-field  class="search" >
+        <!-- <mat-label>Search</mat-label> -->
+
+        <input matInput type="text" >
+        <!-- <button matprefix>sentiment_very_satisfied</button> -->
+
       </mat-form-field>
     </div>
 

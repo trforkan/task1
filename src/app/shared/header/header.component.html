@@ -3,13 +3,15 @@
 
   <mat-sidenav [opened]="true" class="sidenav" #sidenav mode="side">
       <div class="sidenav-button">
-        <button mat-button [matMenuTriggerFor]="menu">
-          <button mat-mini-fab>S</button>
-          systemadmin
-          <button mat-icon-button>
-            <mat-icon>keyboard_arrow_down</mat-icon>
-          </button>
-        </button>
+        <ul class="sidenav-button-main" mat-raised-button [matMenuTriggerFor]="menu">
+          <li>
+            <h2>S</h2>
+          </li>
+          SystemAdmin
+          <mat-icon>
+            expand_more
+          </mat-icon>
+        </ul>
 
         <mat-menu class="menu-items" #menu="matMenu" xPosition="after">
 
