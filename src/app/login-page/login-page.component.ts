@@ -19,6 +19,8 @@ export class LoginPageComponent implements OnInit {
     password: new FormControl("",[])
   });
 
+  hide = true;
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {

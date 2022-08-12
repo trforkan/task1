@@ -84,6 +84,7 @@
 
           width: 100%;
           display: flex;
+          // flex-direction: column;
           // align-content: center;
 
           .option_icon{
@@ -94,7 +95,16 @@
           }
           
           .inputData {
+
             width: 75%;
+          }
+
+          &__range {
+            display: flex;
+            mat-select{
+              // width: 25px;
+              // border: 1px solid black;
+            }
           }
 
           .dltButton {
@@ -103,10 +113,52 @@
 
         }
 
-        .add-button {
-          width: 150px;
-          color: aqua;
-        }
+        &__ans {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          // align-content: center;
+
+          &__ans-manage {
+            .option_icon{
+              margin-top: 12px;
+              margin-right: 5px;
+              // width: 5%;
+              // border: 1px solid red;
+            }
+            
+            .inputData {
+  
+              width: 75%;
+            }
+  
+            .range {
+              display: flex;
+              // flex-direction: column;
+              mat-form-field{
+                width: 100px;
+                // border: 1px solid black;
+              }
+            }
+
+            .labels {
+              display: flex;
+              flex-direction: column;
+              mat-form-field {
+                width: 40%;
+              }
+            }
+  
+            .dltButton {
+              width: 20%;
+            }
+          }
+  
+          .add-button {
+            width: 150px;
+            color: aqua;
+          }
+          }
   
       }
       

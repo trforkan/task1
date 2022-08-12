@@ -27,4 +27,49 @@
     </div>
 
   </div>
+
+
+  <div class="container__table">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 container__table__data">
+
+  
+      <!-- Name Column -->
+      <ng-container class="container__table__row" matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <!-- email Column -->
+      <ng-container class="container__table__row" matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+
+
+      <!-- role Column -->
+      <ng-container class="container__table__row" matColumnDef="role">
+        <th mat-header-cell *matHeaderCellDef> Roles </th>
+        <td mat-cell *matCellDef="let element"> {{element.role}} </td>
+      </ng-container>
+    
+      <!-- Date Column -->
+      <ng-container class="container__table__row" matColumnDef="last_login">
+        <th mat-header-cell *matHeaderCellDef> Last Login </th>
+        <td mat-cell *matCellDef="let element"> {{element.last_login}} </td>
+      </ng-container>
+
+
+      <!-- Status  -->
+      <ng-container class="container__table__row" matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element"><mat-slide-toggle [checked]="element.status"></mat-slide-toggle> </td>
+      </ng-container>
+     
+     
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+
 </div>

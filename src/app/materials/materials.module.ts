@@ -10,6 +10,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatTableModule } from '@angular/material/table';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'; 
 
 const Material = [
   MatFormFieldModule,
@@ -22,7 +25,10 @@ const Material = [
   MatGridListModule,
   MatRadioModule,
   MatDatepickerModule,
-  MatAutocompleteModule
+  MatAutocompleteModule,
+  MatTableModule,
+  MatNativeDateModule,
+  MatSlideToggleModule
 ];
 
 

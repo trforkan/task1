@@ -1,27 +1,28 @@
-.parent {
+.container {
   width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: row;
+  // flex-direction: row;
 
 
-  .child-1 {
+  &__left {
     width: 100%;
+    height: 100%;
 
-    .bg-image {
-      position: relative;
+    &__image {
+      // position: relative;
       width: 100%;
-      height: 99vh;
+      height: 99%;
+      // padding-bottom: 0;
 
     }
 
-    .logo-image {
+    &__logo {
 
       position: absolute;
 
       top: 35%;
       left: 10%;
-      // bottom: 0;
-      // right: 0;
 
       margin: auto;
 
@@ -32,16 +33,14 @@
       width: 45%;
       justify-content: center;
 
-      img {
+      &__icon {
 
-        // width: 300px;
-        // position: absolute;
         width: 25%;
         margin: auto;
 
       }
 
-      h2 {
+      &__title {
         display: flex;
         color: whitesmoke;
         align-items: center;
@@ -49,7 +48,7 @@
         justify-content: center;
       }
 
-      p {
+      &__desc {
         display: flex;
         justify-content: center;
         color: whitesmoke;
@@ -57,7 +56,7 @@
     }
   }
 
-  .child-2 {
+  &__right {
 
     padding: 3rem;
 
@@ -72,31 +71,32 @@
     // justify-content: center;
     margin-top: 100px;
 
-    .logo {
+    &__logo {
       display: flex;
       align-items: center;
       align-content: center;
       justify-content: center;
-      img {
+
+      &__icon {
 
         justify-content: center;
         width: 120px;
       }
     }
 
-    h2 {
+    &__title {
       align-items: center;
       text-align: center;
       padding-top: 20px;
       padding-bottom: 20px;
     }
 
-    form {
+    &__login-form {
 
       display: flex;
       flex-direction: column;
 
-      button {
+      &__button {
         margin-top: 20px;
         color: white;
         background-color: rgb(37, 150, 190);

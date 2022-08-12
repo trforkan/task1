@@ -16,6 +16,16 @@ export interface multiChoiceOptions {
   options: string []
 };
 
+export interface linearScaleQuestion {
+  title: formInfo | null,
+  quesType: string | null,
+  ques: string | null,
+  description: string | null,
+  range: number[] | null,
+  labelRight: string | null,
+  labelLeft: string | null
+};
+
 
 export interface adminUser {
 

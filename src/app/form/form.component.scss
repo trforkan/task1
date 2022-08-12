@@ -1,5 +1,21 @@
-div {
+.container {
   margin-top: 15px;
+  width: 100%;
+
+  &__table{
+    margin: 20px;
+    &__data {
+      width: 100%;
+      // margin: 20px;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: space-between;
+      &__row {
+        // display: flex;
+        // justify-content: space-between;
+      }
+    }
+  }
 
   .form-title {
 

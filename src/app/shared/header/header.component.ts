@@ -28,4 +28,8 @@ export class HeaderComponent implements OnInit {
     alert("Question Builder App Basic");
   }
 
+  toggle = true;
+  status = "Enable";
+
+
 }

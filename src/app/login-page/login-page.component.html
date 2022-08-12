@@ -1,42 +1,47 @@
 <!-- <p>login-page works!</p> -->
 
-<div class="parent">
+<div class="container">
 
-  <div class="child-1">
-    <img class="bg-image" src="assets/acp_landing_page.png" alt="">
+  <div class="container__left">
+    <img class="container__left__image" src="assets/acp_landing_page.png" alt="">
 
-    <div class="logo-image">
-      <img class="logo-image__data" src="assets/acp_logo_v2.png" alt="">
-      <h2>Auditing and Certification Platform</h2>
-      <p>Standardization & Innovation Brought to Auditing, Certification & Inspection Bodies Worldwide</p>
+    <div class="container__left__logo">
+      <img class="container__left__logo__icon" src="assets/acp_logo_v2.png" alt="">
+      <h2 class="container__left__logo__title">Auditing and Certification Platform</h2>
+      <p class="container__left__logo__desc">Standardization & Innovation Brought to Auditing, Certification & Inspection Bodies Worldwide</p>
     </div>
 
   </div>
 
-  <div class="child-2">
+  <div class="container__right">
 
-    <div class="logo">
-      <img src="assets/ACP_Logo.png" alt="">
+    <div class="container__right__logo">
+      <img class="container__right__logo__icon" src="assets/ACP_Logo.png" alt="">
     </div>
 
-    <h2>LOGIN</h2>
+    <h2 class="container__right__title">LOGIN</h2>
 
 
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmitbtn()">
+    <form class="container__right__login-form" [formGroup]="loginForm" (ngSubmit)="onSubmitbtn()">
 
       <mat-form-field appearance="outline">
         <mat-label>Username</mat-label>
         <input type="text" matInput formControlName="userName" required>
       </mat-form-field>
 
+
       <mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
-        <input type="text" matInput formControlName="password" required>
+        <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
       </mat-form-field>
+  
 
       <a href="">Forgot Password?</a>
 
-      <button [disabled] = "loginForm.invalid" type="submit" mat-raised-button>LOGIN</button>
+      <button class="container__right__login-form__button" [disabled] = "loginForm.invalid" type="submit" mat-raised-button>LOGIN</button>
 
 
     </form>

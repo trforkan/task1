@@ -1,4 +1,4 @@
-import { multiChoiceOptions } from './../Model/models';
+import { multiChoiceOptions, linearScaleQuestion } from './../Model/models';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
@@ -31,7 +31,20 @@ export class AddFormComponent implements OnInit {
 
   multiChoiceQues: multiChoiceOptions[] = [];
 
-  quesTypeName: string = 'Checkbox';
+  linearScaleQues: linearScaleQuestion[] = [];
+
+
+  formInput_linearScale = new FormGroup({
+    title: new FormControl("",[]),
+    quesType: new FormControl("",[]),
+    ques: new FormControl("",[]),
+    description: new FormControl("",[]),
+    range: new FormArray([],[]),
+    labelRight: new FormControl("",[]),
+    labelLeft: new FormControl("",[])
+  })
+
+  quesTypeName: string = 'Linear Scale';
 
   constructor() {}
 
@@ -75,6 +88,12 @@ export class AddFormComponent implements OnInit {
 
     console.log(this.quesTypeName);
   }
+
+  // linear_scale(event: any, name: string) {
+  //   this.linearScaleQues[0]{
+  //     name: event;
+  //   };
+  // }
 
   dltFromOptions(keyvalue: number) {
     console.log(this.optionList[keyvalue]);
