@@ -2,6 +2,7 @@
 
   <div class="add-form">
     <h2>ADD FORM</h2>
+    <button class="btn" [disabled]="true" mat-stroked-button><mat-icon>add_circle</mat-icon> </button>
   </div>
 
   <div class="form-info">
@@ -51,22 +52,43 @@
 
       <div class="ques-details">
 
-        <div class="ans-manage" *ngFor="let answer of optionList index as i">
+        <ng-container  *ngIf="quesTypeName==='Multiple Choice'">
+          <div class="ans-manage" *ngFor="let answer of optionList index as i">
 
-          <mat-form-field class="inputData" >
-            <mat-label>Answer</mat-label>
-            <input type="text" matInput (change)="idxPos(i,$event)" [value]="answer">
+            <mat-icon class="option_icon">radio_button_unchecked</mat-icon>
+            
+            <mat-form-field class="inputData" >
+              <mat-label>Answer</mat-label>
+              <input type="text" matInput (change)="idxPos(i,$event)" [value]="answer">
+              
+            </mat-form-field>
+            <button class="dltButton" mat-button (click)="dltFromOptions(i)">
+              <mat-icon>delete</mat-icon>
+            </button>
+  
+          </div>
+        </ng-container>
 
-          </mat-form-field>
-          <button class="dltButton" mat-button (click)="dltFromOptions(i)">
-            <mat-icon>delete</mat-icon>
-          </button>
+        <ng-container  *ngIf="quesTypeName==='Checkbox'">
+          <div class="ans-manage" *ngFor="let answer of optionList index as i">
 
-        </div>
+            <mat-icon class="option_icon">check_box_outline_blank</mat-icon>
+            
+            <mat-form-field class="inputData" >
+              <mat-label>Answer</mat-label>
+              <input type="text" matInput (change)="idxPos(i,$event)" [value]="answer">
+              
+            </mat-form-field>
+            <button class="dltButton" mat-button (click)="dltFromOptions(i)">
+              <mat-icon>delete</mat-icon>
+            </button>
+  
+          </div>
+        </ng-container>
 
 
 
-        <button mat-stroked-button (click)="onTapAddbtn()">Add Option</button>
+        <button class="add-button" mat-stroked-button (click)="onTapAddbtn()">Add Option</button>
 
       </div>
 

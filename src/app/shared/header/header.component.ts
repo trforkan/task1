@@ -24,4 +24,8 @@ export class HeaderComponent implements OnInit {
     this.router.navigateByUrl(pageName);
   }
 
+  about(){
+    alert("Question Builder App Basic");
+  }
+
 }

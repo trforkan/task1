@@ -69,6 +69,7 @@ export class AddFormComponent implements OnInit {
 
   setQuesType(event: any) {
     // console.log(event);
+    this.optionList=[""];
 
     this.quesTypeName = event; //JSON.stringify(event);
 
