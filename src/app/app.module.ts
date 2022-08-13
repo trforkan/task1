@@ -13,6 +13,7 @@ import { FormComponent } from './form/form.component';
 import { AddFormComponent } from './add-form/add-form.component';
 import { UserComponent } from './user/user.component';
 import { AddUserComponent } from './add-user/add-user.component';
+import { OnhovertrialComponent } from './onhovertrial/onhovertrial.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AddUserComponent } from './add-user/add-user.component';
     AddFormComponent,
     UserComponent,
     AddUserComponent,
+    OnhovertrialComponent,
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,7 @@ export class AddUserComponent implements OnInit {
     lastName: new FormControl("",[]),
     displayName: new FormControl("",[]),
     gender: new FormControl("",[]),
+    dateOfBirth: new FormControl("",[]), 
     nationality: new FormControl("",[]),
     email: new FormControl("",[]),
     role: new FormControl("",[]),

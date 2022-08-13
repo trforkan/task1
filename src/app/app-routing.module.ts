@@ -1,3 +1,4 @@
+import { OnhovertrialComponent } from './onhovertrial/onhovertrial.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { UserComponent } from './user/user.component';
 import { AddFormComponent } from './add-form/add-form.component';
@@ -23,7 +24,7 @@ const routes: Routes = [
       ],
   },
 
-  // { path: 'form', component: FormComponent}
+  { path: 'hover', component: OnhovertrialComponent}
 ];
 
 @NgModule({

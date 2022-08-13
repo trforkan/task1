@@ -100,18 +100,27 @@ mat-sidenav-container {
   mat-sidenav-content {
 
     .sidenav-content {
-      padding: 12px;
+      // padding: 12px;
       border-bottom: 1px solid rgb(189, 184, 177);
       justify-content: space-between;
       display: flex;
       align-items: center;
 
-      img {
-        width: 70px;
-        padding: 6px;
-        margin-right: 25px;
-        padding-left: 45px;
+      &__image{
+        // border: 1px solid red;
+        height: 61px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-left: 1px solid rgb(189, 184, 177);
+        img {
+          justify-content: center;
+          width: 70px;
+          padding: 6px;
+          margin-right: 25px;
+          padding-left: 45px;
+         
+        }
       }
 
     }
